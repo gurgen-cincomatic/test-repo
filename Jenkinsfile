@@ -4,6 +4,8 @@ pipeline {
         gitParameter name: 'Version',
             defaultValue: 'origin/Main',
             type: 'PT_TAG'
+
+        choice(name: 'Partner Name', choices: ['one', 'two', 'three'], description: 'Enter Partner name')
    }
    stages{
       stage('Checkout project'){
